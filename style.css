@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .btn_gradiente {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .btn_gradiente:hover {
+    background-color: #5a005a;
+}
+
+/* Título acima das imagens */
+.content h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Galeria de imagens */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Formulário de segurança */
+.form-section {
+    margin-top: 2rem;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-section input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-section button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #5a005a;
+}
+
+.message {
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;  /* Espaçamento entre o botão e o rodapé */
+}
